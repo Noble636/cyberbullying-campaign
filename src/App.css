@@ -1,38 +1,222 @@
+.owner-credit {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.7;
+  text-align: right;
+  font-style: italic;
+  text-shadow: 1px 1px 4px #000, 0 0 2px #000;
+  pointer-events: none;
+  z-index: 2;
+}
+.main-btn {
+  background: linear-gradient(90deg, #d7263d 0%, #43cea2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  margin: 0 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.main-btn:hover {
+  background: linear-gradient(90deg, #a61b2b 0%, #185a9d 100%);
+  color: #ffe066;
+  transform: scale(1.07);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.4s;
+}
+
+.modal-content {
+  background: linear-gradient(120deg, #fffbe6 0%, #ffe066 100%);
+  color: #222;
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px #0003;
+  max-width: 420px;
+  width: 90vw;
+  animation: popIn 0.4s;
+  position: relative;
+}
+
+.modal-content h2 {
+  color: #d7263d;
+  margin-bottom: 16px;
+}
+.modal-content h3 {
+  color: #185a9d;
+  margin-bottom: 8px;
+}
+.modal-content ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+.hotlines {
+  background: rgba(255,255,255,0.18);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 18px;
+}
+.back-btn {
+  margin-top: 28px;
+  background: #d7263d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0002;
+}
+.back-btn:hover {
+  background: #a61b2b;
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App-header.animated-bg {
+  background: linear-gradient(120deg, #ffb347 0%, #43cea2 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInBg 1.2s;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes fadeInBg {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d7263d;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 8px #fff2;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 6px #000, 0 0 2px #000;
+}
+.tips {
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px #0001;
+  animation: fadeIn 1s;
+/* Removed stray closing brace to fix CSS syntax error */
+.tips h2, .tips ul, .tips li {
+  text-shadow: 2px 2px 6px #000, 0 0 2px #000;
+}
+.tips h2 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #43cea2;
+}
+.tips ul {
+  list-style: disc inside;
+  text-align: left;
+  padding-left: 0;
+}
+.tips li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.tips {
+  background: rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 32px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px #0001;
+  animation: fadeIn 1s;
+}
+
+.tips h2 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #43cea2;
+}
+
+.tips ul {
+  list-style: disc inside;
+  text-align: left;
+  padding-left: 0;
+}
+
+.tips li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.animated-shapes {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+  animation: floatShape 6s infinite ease-in-out alternate;
+}
+
+.shape1 {
+  width: 180px; height: 180px;
+  background: #d7263d;
+  top: 10%; left: 8%;
+  animation-delay: 0s;
+}
+.shape2 {
+  width: 120px; height: 120px;
+  background: #43cea2;
+  bottom: 12%; right: 10%;
+  animation-delay: 2s;
+}
+.shape3 {
+  width: 90px; height: 90px;
+  background: #ffe066;
+  top: 70%; left: 60%;
+  animation-delay: 1s;
+}
+
+@keyframes floatShape {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-30px) scale(1.1); }
 }

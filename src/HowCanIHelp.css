@@ -1,0 +1,53 @@
+.help-page {
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  max-width: 500px;
+  margin: 40px auto;
+  animation: fadeIn 0.8s;
+}
+
+.help-page h2 {
+  color: #ffe066;
+  margin-bottom: 16px;
+}
+
+.help-page ul {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.hotlines {
+  background: rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.hotlines h3 {
+  color: #ffe066;
+  margin-bottom: 8px;
+}
+
+.back-btn {
+  margin-top: 32px;
+  background: #ffe066;
+  color: #185a9d;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #ffd700;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
