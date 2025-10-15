@@ -1,3 +1,58 @@
+@media (max-width: 600px) {
+  .App-header.animated-bg {
+    font-size: 1rem;
+    padding: 12px 0;
+    min-height: 100vh;
+  }
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .main-btn {
+    width: 90vw;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 12px 0;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+  .tips {
+    max-width: 95vw;
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+  .modal-content {
+    max-width: 95vw;
+    padding: 18px 8px;
+    font-size: 1rem;
+  }
+  .owner-credit {
+    right: 8px;
+    bottom: 8px;
+    font-size: 0.9rem;
+  }
+  .animated-shapes .shape1 {
+    width: 90px; height: 90px;
+    left: 2%; top: 8%;
+  }
+  .animated-shapes .shape2 {
+    width: 60px; height: 60px;
+    right: 4%; bottom: 8%;
+  }
+  .animated-shapes .shape3 {
+    width: 40px; height: 40px;
+    left: 60%; top: 70%;
+  }
+}
 .owner-credit {
   position: absolute;
   right: 24px;
